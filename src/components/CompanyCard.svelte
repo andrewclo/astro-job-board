@@ -7,10 +7,10 @@
   export let id: string;
 </script>
 
-<article class="bg-white p-6 border-3 border-black hover:border-accent transition-colors">
+<article class="bg-white p-6 rounded-lg shadow-subtle hover:shadow-hover transition-all duration-300">
   <div class="flex justify-between items-start mb-4">
     <div>
-      <h2 class="text-xl font-bold mb-2">{name}</h2>
+      <h2 class="text-xl font-bold mb-2 text-primary">{name}</h2>
       <p class="text-gray-700">{industry}</p>
     </div>
     <div class="text-sm text-gray-500">
@@ -21,12 +21,12 @@
   <p class="text-gray-700 mb-4 line-clamp-2">{description}</p>
 
   <div class="flex flex-wrap gap-2 mb-4">
-    <span class="px-3 py-1 bg-gray-100 text-sm font-mono">{location}</span>
+    <span class="px-3 py-1 bg-gray-50 text-sm font-mono border border-gray-200 rounded">{location}</span>
   </div>
 
   <a
     href={`/companies/${id}`}
-    class="inline-block px-6 py-2 bg-black text-white hover:bg-accent transition-colors"
+    class="inline-block px-6 py-2 bg-primary text-white hover:bg-primary-light transition-colors duration-200 rounded"
   >
     View Company
   </a>
