@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CompanyCard from '../../components/CompanyCard.svelte';
+import companiesData from '../../data/companies.json';
+
+const { companies } = companiesData;
+---
+
+<Layout title="Cycling Industry Companies">
+  <main class="min-h-screen bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold mb-8">Cycling Industry Companies</h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {companies.map(company => (
+          <CompanyCard client:load {...company} />
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout> 

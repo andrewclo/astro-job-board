@@ -1,0 +1,37 @@
+{
+  "companies": [
+    {
+      "id": "specialized",
+      "name": "Specialized Bicycles",
+      "description": "Specialized is one of the world's leading manufacturers of bicycles and cycling equipment, known for innovation and high-performance products.",
+      "website": "https://www.specialized.com",
+      "logo": "/images/companies/specialized.svg",
+      "location": "Morgan Hill, CA",
+      "founded": 1974,
+      "size": "1000-5000",
+      "industry": "Bicycle Manufacturing"
+    },
+    {
+      "id": "trek",
+      "name": "Trek Bicycle",
+      "description": "Trek is a global leader in the design and manufacture of bicycles and related products and services.",
+      "website": "https://www.trekbikes.com",
+      "logo": "/images/companies/trek.svg",
+      "location": "Waterloo, WI",
+      "founded": 1976,
+      "size": "1000-5000",
+      "industry": "Bicycle Manufacturing"
+    },
+    {
+      "id": "strava",
+      "name": "Strava",
+      "description": "Strava is the leading digital platform for active people, connecting athletes worldwide.",
+      "website": "https://www.strava.com",
+      "logo": "/images/companies/strava.svg",
+      "location": "San Francisco, CA",
+      "founded": 2009,
+      "size": "100-500",
+      "industry": "Sports Technology"
+    }
+  ]
+} 

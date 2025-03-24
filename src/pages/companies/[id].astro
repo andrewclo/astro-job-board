@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CompanyProfile from '../../components/CompanyProfile.svelte';
+import companiesData from '../../data/companies.json';
+
+export async function getStaticPaths() {
+  return companiesData.companies.map(company => ({
+    params: { id: company.id },
+    props: { company },
+  }));
+}
+
+const { company } = Astro.props;
+---
+
+<Layout title={`${company.name} - Company Profile`}>
+  <main class="min-h-screen bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <CompanyProfile client:load company={company} />
+    </div>
+  </main>
+</Layout> 

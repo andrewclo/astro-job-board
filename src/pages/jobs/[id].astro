@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JobDetail from '../../components/JobDetail.svelte';
+import jobsData from '../../data/jobs.json';
+
+export async function getStaticPaths() {
+  return jobsData.jobs.map(job => ({
+    params: { id: job.id },
+    props: { jobId: job.id },
+  }));
+}
+
+const { jobId } = Astro.props;
+---
+
+<Layout title="Job Details">
+  <main class="min-h-screen bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <JobDetail client:load jobId={jobId} />
+    </div>
+  </main>
+</Layout> 

@@ -1,0 +1,70 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Senior Product Designer",
+      "company": "Specialized Bicycles",
+      "companyId": "specialized",
+      "category": "design",
+      "type": "full-time",
+      "locations": ["Morgan Hill, CA", "Remote"],
+      "description": "We're looking for a Senior Product Designer to join our team and help create the next generation of cycling products.",
+      "requirements": [
+        "5+ years of product design experience",
+        "Strong portfolio in industrial design",
+        "Experience with cycling products preferred",
+        "Proficiency in CAD software"
+      ],
+      "postedAt": "2024-03-20",
+      "salary": {
+        "min": 120000,
+        "max": 160000,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Sales Manager - Europe",
+      "company": "Trek Bicycle",
+      "companyId": "trek",
+      "category": "sales",
+      "type": "full-time",
+      "locations": ["Amsterdam, Netherlands", "Remote"],
+      "description": "Lead our European sales team and drive growth in the region.",
+      "requirements": [
+        "8+ years of sales experience",
+        "Strong leadership skills",
+        "Experience in the cycling industry",
+        "Fluent in English and at least one European language"
+      ],
+      "postedAt": "2024-03-19",
+      "salary": {
+        "min": 80000,
+        "max": 120000,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Software Engineer",
+      "company": "Strava",
+      "companyId": "strava",
+      "category": "engineering",
+      "type": "full-time",
+      "locations": ["Remote"],
+      "description": "Join our engineering team to build the future of cycling and running technology.",
+      "requirements": [
+        "3+ years of software development experience",
+        "Strong knowledge of TypeScript and React",
+        "Experience with cloud platforms",
+        "Passion for cycling or running"
+      ],
+      "postedAt": "2024-03-18",
+      "salary": {
+        "min": 130000,
+        "max": 180000,
+        "currency": "USD"
+      }
+    }
+  ]
+} 

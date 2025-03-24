@@ -1,22 +1,59 @@
-<!doctype html>
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Find your next job in the cycling industry" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-gray-100">
+		<header class="bg-white border-b-3 border-black">
+			<nav class="container mx-auto px-4 py-4">
+				<div class="flex items-center justify-between">
+					<a href="/" class="text-2xl font-bold">Cycling Jobs</a>
+					<div class="space-x-6">
+						<a href="/" class="hover:text-accent">Jobs</a>
+						<a href="/companies" class="hover:text-accent">Companies</a>
+					</div>
+				</div>
+			</nav>
+		</header>
 		<slot />
+		<footer class="bg-white border-t-3 border-black mt-8">
+			<div class="container mx-auto px-4 py-8">
+				<p class="text-center text-gray-600">© {new Date().getFullYear()} Cycling Jobs. All rights reserved.</p>
+			</div>
+		</footer>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	:root {
+		--accent: 255, 0, 0;
+		--accent-light: 255, 0, 0, 0.1;
+		--accent-dark: 200, 0, 0;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-dark)));
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #f6f6f6;
+		background-size: 224px;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
