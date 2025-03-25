@@ -9,11 +9,15 @@
   function filterJobs(filters: { category: string; type: string; location: string }) {
     filteredJobs = jobs.filter(job => {
       const categoryMatch = !filters.category || job.category === filters.category;
+      
+      // Standard type matching as remote is now a proper job type 
       const typeMatch = !filters.type || job.type === filters.type;
+      
+      // Text-based case-insensitive search for location
       const locationMatch = !filters.location || 
         job.locations.some(loc => 
           loc.toLowerCase().includes(filters.location.toLowerCase())
-        );
+        ) || (job.locations.length === 0 && filters.type === 'remote');
       
       return categoryMatch && typeMatch && locationMatch;
     });

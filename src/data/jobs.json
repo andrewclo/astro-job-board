@@ -6,8 +6,8 @@
       "company": "Specialized Bicycles",
       "companyId": "specialized",
       "category": "design",
-      "type": "full-time",
-      "locations": ["Morgan Hill, CA", "Remote"],
+      "type": "remote",
+      "locations": ["Morgan Hill, CA"],
       "description": "We're looking for a Senior Product Designer to join our team and help create the next generation of cycling products.",
       "requirements": [
         "5+ years of product design experience",
@@ -28,8 +28,8 @@
       "company": "Trek Bicycle",
       "companyId": "trek",
       "category": "sales",
-      "type": "full-time",
-      "locations": ["Amsterdam, Netherlands", "Remote"],
+      "type": "remote",
+      "locations": ["Amsterdam, Netherlands"],
       "description": "Lead our European sales team and drive growth in the region.",
       "requirements": [
         "8+ years of sales experience",
@@ -50,8 +50,8 @@
       "company": "Strava",
       "companyId": "strava",
       "category": "engineering",
-      "type": "full-time",
-      "locations": ["Remote"],
+      "type": "remote",
+      "locations": [],
       "description": "Join our engineering team to build the future of cycling and running technology.",
       "requirements": [
         "3+ years of software development experience",
