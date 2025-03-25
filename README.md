@@ -46,3 +46,36 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Deployment Strategy
+
+This project uses a branch-based deployment strategy:
+
+- **main**: Development branch where all development work happens
+- **production**: Deployment branch that triggers the GitHub Pages build and deployment
+
+### Workflow
+
+1. Develop and commit changes to the `main` branch
+2. When ready to deploy, merge changes from `main` to `production`:
+   ```bash
+   # Make sure you're on the main branch
+   git checkout main
+   
+   # Pull the latest changes
+   git pull origin main
+   
+   # Checkout the production branch
+   git checkout production
+   # (Create it first if it doesn't exist: git checkout -b production)
+   
+   # Merge changes from main
+   git merge main
+   
+   # Push to production
+   git push origin production
+   ```
+
+3. GitHub Actions will automatically build and deploy the site to GitHub Pages whenever changes are pushed to the `production` branch.
+
+4. You can also manually trigger a deployment from the GitHub Actions tab by running the "Deploy to GitHub Pages" workflow.

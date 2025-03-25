@@ -5,8 +5,8 @@ import svelte from '@astrojs/svelte';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://YOUR_GITHUB_USERNAME.github.io', // Replace with your GitHub username
-  base: '/REPOSITORY_NAME', // Replace with your repository name
+  site: 'https://andrewclo.github.io', // Replace with your GitHub username
+  base: '/astro-job-board', // Updated to match your repository name
   output: 'static',
   integrations: [tailwind(), svelte()],
 });
