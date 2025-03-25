@@ -12,11 +12,11 @@
   }
 </script>
 
-<div class="bg-white p-8 rounded-lg shadow-subtle">
+<div class="bg-white p-8 rounded-lg shadow-subtle" data-astro-transition-scope>
   <div class="flex justify-between items-start mb-6">
     <div>
-      <h1 class="text-4xl font-bold mb-4 text-primary">{job.title}</h1>
-      <a href={`/astro-job-board/companies/${company.id}`} class="text-xl text-gray-700 hover:text-accent transition-colors duration-200">
+      <h1 class="text-4xl font-bold mb-4 text-primary" data-astro-transition={`job-title-${jobId}`}>{job.title}</h1>
+      <a href={`/astro-job-board/companies/${company.id}`} class="text-xl text-gray-700 hover:text-accent transition-colors duration-200" data-astro-transition={`company-name-${company.id}`}>
         {company.name}
       </a>
     </div>
@@ -41,7 +41,7 @@
 
   <div class="prose max-w-none">
     <h2 class="text-2xl font-bold mb-4 text-primary">Job Description</h2>
-    <p class="text-gray-700 mb-6">{job.description}</p>
+    <p class="text-gray-700 mb-6" data-astro-transition={`job-desc-${jobId}`}>{job.description}</p>
 
     <h2 class="text-2xl font-bold mb-4 text-primary">Requirements</h2>
     <ul class="list-disc pl-6 space-y-2">

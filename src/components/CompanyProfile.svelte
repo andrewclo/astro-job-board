@@ -17,16 +17,16 @@
   const companyJobs = jobsData.jobs.filter(job => job.companyId === company.id);
 </script>
 
-<div class="bg-white p-8 border-3 border-black mb-8">
+<div class="bg-white p-8 border-3 border-black mb-8" data-astro-transition-scope>
   <div class="flex items-start justify-between">
     <div>
-      <h1 class="text-4xl font-bold mb-4">{company.name}</h1>
-      <p class="text-xl text-gray-700 mb-4">{company.description}</p>
+      <h1 class="text-4xl font-bold mb-4" data-astro-transition={`company-title-${company.id}`}>{company.name}</h1>
+      <p class="text-xl text-gray-700 mb-4" data-astro-transition={`company-desc-${company.id}`}>{company.description}</p>
       <div class="flex flex-wrap gap-4 text-sm text-gray-600">
         <span>Founded: {company.founded}</span>
         <span>Size: {company.size}</span>
-        <span>Industry: {company.industry}</span>
-        <span>Location: {company.location}</span>
+        <span data-astro-transition={`company-industry-${company.id}`}>Industry: {company.industry}</span>
+        <span data-astro-transition={`company-location-${company.id}`}>Location: {company.location}</span>
       </div>
     </div>
     <a
@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<div class="space-y-6">
+<div class="space-y-6" data-astro-transition="open-positions">
   <h2 class="text-2xl font-bold">Open Positions</h2>
   {#if companyJobs.length > 0}
     {#each companyJobs as job}

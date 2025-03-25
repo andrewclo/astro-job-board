@@ -11,11 +11,11 @@
   export let id: string;
 </script>
 
-<article class="bg-white p-6 border-2 border-gray-200 rounded-lg shadow-subtle hover:shadow-hover transition-all duration-300">
+<article class="bg-white p-6 border-2 border-gray-200 rounded-lg shadow-subtle hover:shadow-hover transition-all duration-300" data-astro-transition-scope>
   <div class="flex justify-between items-start mb-4">
     <div>
-      <h2 class="text-xl font-bold mb-2 text-primary">{title}</h2>
-      <a href={`/astro-job-board/companies/${companyId}`} class="text-lg text-gray-700 hover:text-accent transition-colors duration-200">
+      <h2 class="text-xl font-bold mb-2 text-primary" data-astro-transition={`job-title-${id}`}>{title}</h2>
+      <a href={`/astro-job-board/companies/${companyId}`} class="text-lg text-gray-700 hover:text-accent transition-colors duration-200" data-astro-transition={`company-name-${companyId}`}>
         {company}
       </a>
     </div>
@@ -32,7 +32,7 @@
     {/each}
   </div>
 
-  <p class="text-gray-700 mb-4 line-clamp-2">{description}</p>
+  <p class="text-gray-700 mb-4 line-clamp-2" data-astro-transition={`job-desc-${id}`}>{description}</p>
 
   {#if salary}
     <div class="text-sm text-gray-600 mb-4">

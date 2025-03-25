@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
 	title: string;
 }
@@ -18,12 +20,13 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="bg-gray-50">
-		<header class="bg-white border-b border-gray-200 shadow-subtle">
+		<header class="bg-white border-b border-gray-200 shadow-subtle" transition:animate="slide">
 			<nav class="container mx-auto px-4 py-4">
 				<div class="flex items-center justify-between">
-					<a href="/astro-job-board" class="text-2xl font-bold text-primary">Cycling Jobs</a>
+					<a href="/astro-job-board" class="text-2xl font-bold text-primary" transition:name="site-title">Cycling Jobs</a>
 					<div class="space-x-6">
 						<a href="/astro-job-board" class="text-gray-700 hover:text-accent transition-colors duration-200">Jobs</a>
 						<a href="/astro-job-board/companies" class="text-gray-700 hover:text-accent transition-colors duration-200">Companies</a>
@@ -31,8 +34,10 @@ const { title } = Astro.props;
 				</div>
 			</nav>
 		</header>
-		<slot />
-		<footer class="bg-white border-t border-gray-200 mt-8">
+		<main class="container mx-auto px-4 py-8" transition:animate="slide">
+			<slot />
+		</main>
+		<footer class="bg-white border-t border-gray-200 mt-8" transition:animate="fade">
 			<div class="container mx-auto px-4 py-8">
 				<p class="text-center text-gray-600">© {new Date().getFullYear()} Cycling Jobs. All rights reserved.</p>
 			</div>
@@ -55,5 +60,48 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	/* Brutalist View Transition Styles */
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.5s;
+		animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+	}
+
+	@keyframes slide-from-right {
+		from {
+			transform: translateX(100%);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slide-to-left {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes clip-in {
+		from {
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		}
+		to {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
 	}
 </style>
