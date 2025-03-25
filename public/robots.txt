@@ -1,0 +1,3 @@
+# Disallow all robots from crawling any part of the site
+User-agent: *
+Disallow: / 
