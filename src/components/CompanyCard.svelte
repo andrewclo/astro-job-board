@@ -25,7 +25,7 @@
   </div>
 
   <a
-    href={`/companies/${id}`}
+    href={`/astro-job-board/companies/${id}`}
     class="inline-block px-6 py-2 bg-primary text-white hover:bg-primary-light transition-colors duration-200 rounded"
   >
     View Company

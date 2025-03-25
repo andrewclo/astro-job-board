@@ -15,7 +15,7 @@
   <div class="flex justify-between items-start mb-4">
     <div>
       <h2 class="text-xl font-bold mb-2 text-primary">{title}</h2>
-      <a href={`/companies/${companyId}`} class="text-lg text-gray-700 hover:text-accent transition-colors duration-200">
+      <a href={`/astro-job-board/companies/${companyId}`} class="text-lg text-gray-700 hover:text-accent transition-colors duration-200">
         {company}
       </a>
     </div>
@@ -41,7 +41,7 @@
   {/if}
 
   <a
-    href={`/jobs/${id}`}
+    href={`/astro-job-board/jobs/${id}`}
     class="inline-block px-6 py-2 bg-primary text-white hover:bg-primary-light transition-colors duration-200 rounded"
   >
     View Details

@@ -16,7 +16,7 @@
   <div class="flex justify-between items-start mb-6">
     <div>
       <h1 class="text-4xl font-bold mb-4 text-primary">{job.title}</h1>
-      <a href={`/companies/${company.id}`} class="text-xl text-gray-700 hover:text-accent transition-colors duration-200">
+      <a href={`/astro-job-board/companies/${company.id}`} class="text-xl text-gray-700 hover:text-accent transition-colors duration-200">
         {company.name}
       </a>
     </div>
@@ -53,7 +53,7 @@
 
   <div class="mt-8 flex gap-4">
     <a
-      href={`/companies/${company.id}`}
+      href={`/astro-job-board/companies/${company.id}`}
       class="px-6 py-2 bg-gray-50 text-primary hover:bg-gray-100 transition-colors duration-200 rounded border border-gray-200"
     >
       View Company Profile
